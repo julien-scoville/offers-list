@@ -1,7 +1,8 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ポイント獲得 プロトタイプ</title>
+<title>App Prototype_Swipe View</title>
 <style>
 :root{--out:#dfe3e8;--y:#ffe135;--tx:#1f2328;--mu:#7a828c;--bl:#2f7fe0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--out:#14171a}}
@@ -181,7 +182,7 @@ const ovh=ov=>ov.map(x=>typeof x=='string'?`<p>${x}</p>`:`<h4>${x[0]}</h4>${x[1]
 function detail(o){S.scr='det';
  const stp=o.st?o.st.map((t,k)=>`<div class="stp"><i>${k+1}</i><span style="padding-top:4px">${t}</span></div>`).join('')+`<div class="stp"><i>¥</i><span style="padding-top:4px">ポイントが付与される！</span></div>`:'';
  const av=NM.slice(0,Math.min(o.n||8,8)).map(c=>`<span class="av">${c}</span>`).join('');
- const mid=o.st?`<h3 style="margin-top:24px">ポイント獲得方法</h3>${stp}<div class="pa" style="margin:26px 0 12px"><h3 style="margin:0">同じサークルの申込者（${o.n}人）</h3><span style="color:var(--bl);font-size:12px;font-weight:700">一覧を見る</span></div><div style="padding-left:2px">${av}</div>`:'';
+ const mid=o.st?`<h3 style="margin-top:24px">ポイント獲得方法</h3>${stp}${[4,5,7].includes(o.id)?'':`<div class="pa" style="margin:26px 0 12px"><h3 style="margin:0">同じサークルの申込者（${o.n}人）</h3><span style="color:var(--bl);font-size:12px;font-weight:700">一覧を見る</span></div><div style="padding-left:2px">${av}</div>`}`:'';
  app.innerHTML=`<div class="scr" style="background:#fff"><button class="bk" data-act="back" aria-label="戻る">‹</button><div class="dt" style="padding-top:32px">${banner(o,1)}<h2>${o.t}</h2>${spon(o,1)}${pts(o,1)}<h3 style="margin-top:24px">対象者</h3>${bd(o.e)}${mid}<h3 style="margin-top:28px">オファー概要</h3><div class="ov">${ovh(o.ov)}</div></div></div><div class="ft"><button class="sh" type="button" data-act="share" aria-label="共有する"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2f9bff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4M8 8l4-4 4 4M5 11v8a1 1 0 001 1h12a1 1 0 001-1v-8"/></svg><span>共有する</span></button><button class="nx" type="button">次へ</button></div>`}
 
 const XB='<svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 3l12 12M15 3L3 15" stroke="#1f2328" stroke-width="2.6" stroke-linecap="round"/></svg>';
@@ -217,3 +218,5 @@ function gShow(){const s=GS[G],last=G==GS.length-1;
 function gStart(){G=0;gShow();addEventListener('resize',gPlace)}
 S.scr='disc';disc();gStart();
 </script></body></html>
+
+</body></html>

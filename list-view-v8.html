@@ -61,7 +61,7 @@ h2{font-size:17px;font-weight:700;line-height:1.4}
 .d-hrow{display:flex;align-items:center;justify-content:space-between;margin:32px 0 16px}.d-hrow .d-h{margin:0}.d-tg{display:flex;flex-wrap:wrap;gap:6px}
 .steps li b.coin{font-size:11px;font-weight:700;box-shadow:inset 0 0 0 4px var(--yellow),inset 0 0 0 5.5px #1B1D21}
 
-.avs{margin-top:0}.avs i{background:#E3E6EB;color:#6F7480;font-weight:500;font-size:11px;border:2px solid #fff;display:block;text-align:left;padding-left:4px;line-height:28px;overflow:hidden;white-space:nowrap}
+.avs{margin-top:0}.avs i{background:#E3E6EB;color:#828791;font-weight:500;font-size:11px;border:2px solid #fff;display:block;text-align:left;padding-left:4px;line-height:28px;overflow:hidden;white-space:nowrap}
 .desc{white-space:pre-line}
 /* top bar */
 .bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:center;height:60px;background:var(--bg);font-size:16px;font-weight:700}
@@ -113,7 +113,7 @@ h2{font-size:17px;font-weight:700;line-height:1.4}
 .box h4{font-size:12px;font-weight:700;margin-bottom:8px}
 .box hr{border:0;border-top:1px solid #E1E4E8;margin:14px 0}
 .mem{display:flex;align-items:center;justify-content:space-between}
-.avs{display:flex;margin-top:8px}.avs i{width:32px;height:32px;border-radius:50%;border:2px solid var(--tile);margin-right:-6px;display:grid;place-items:center;font:500 11px 'Noto Sans JP';font-style:normal;color:#fff}
+.avs{display:flex;margin-top:8px}.avs i{width:32px;height:32px;border-radius:50%;border:2px solid var(--tile);margin-right:-6px;display:grid;place-items:center;font:500 11px 'Noto Sans JP';font-style:normal;color:#828791}
 .steps{list-style:none;padding:0}
 .steps li{display:flex;gap:14px;align-items:center;font-size:13px;color:#4A4F58;padding-bottom:18px;position:relative;line-height:1.5}
 .steps li:last-child{padding-bottom:0}
@@ -121,8 +121,8 @@ h2{font-size:17px;font-weight:700;line-height:1.4}
 .steps li:not(:last-child)::after{content:'';position:absolute;left:14px;bottom:var(--ab,6.5px);width:0;height:0;transform:translateX(-50%);border:5px solid transparent;border-top-color:#FFE82B;border-bottom-width:0}
 .desc{font-size:13px;line-height:1.8;color:#4A4F58}.desc p{margin-bottom:16px}.desc strong{color:var(--ink);display:block}
 .foot{position:sticky;z-index:6;bottom:0;flex:none;margin-top:auto;display:flex;align-items:center;gap:16px;padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));background:linear-gradient(rgba(255,255,255,0),#fff 28%)}
-.foot .sh{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:var(--sub);min-width:48px;white-space:nowrap}
-.foot .sh svg{width:24px;height:24px;color:var(--blue)}
+.foot .sh{flex:none;width:48px;height:48px;border-radius:50%;border:1.5px solid #D9DCE1;background:#fff;display:grid;place-items:center;color:#5F646E}
+.foot .sh svg{width:22px;height:22px}
 .foot .btn{flex:1}
 /* share page */
 #share{z-index:5;transform:translateY(100%);display:flex;flex-direction:column;padding-bottom:0}
@@ -200,6 +200,7 @@ h2{font-size:17px;font-weight:700;line-height:1.4}
 <symbol id="venus" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6.5" fill="currentColor"/><path d="M12 15v7M8.5 19h7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
 <symbol id="chev" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="flame" viewBox="0 0 24 24"><path d="M12.8 1.5c.6 3.4-1 5-2.6 6.800C8.600 10.100 7 12 7 14.800a5.500 5.500 0 0 0 11 0c0-2.600-1.200-4.400-2.400-5.800-.3 1.300-.9 2.100-1.800 2.500.4-3.800-.2-6.900-1-10z" fill="#FF6A3D"/><path d="M12.500 22a3.300 3.300 0 0 0 3.300-3.300c0-1.900-1.400-3-2.300-4.500-.4 1.100-1.200 1.700-2 2.500-.8.900-1.300 1.700-1.300 2.800a3.300 3.300 0 0 0 3.300 2.500z" fill="#FFC53D"/></symbol>
+<symbol id="clock2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 8.8V13l2.8 1.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </defs></svg>
 
 <div class="app" id="app">
@@ -351,7 +352,7 @@ const D={
 
 🌱 **「まずは相談してみたい」でもOK！**
 就活の方向性を整理しながら、自分に合った企業を見つけたい28卒の方におすすめです。`},
-2:{sp:'ナッジ株式会社',gp:2000,pp:2000,mem:8,steps:['承認条件を確認する','Nudgeアプリをダウンロードして、\nNudgeカードに申し込む','申込完了の証明を提出する','Nudgeカードを有効化する','審査'],desc:`🎓 学生生活をもっと自由に！Nudge Card 学生部 💳✨
+2:{sp:'ナッジ株式会社',gp:2000,pp:2000,mem:8,steps:['承認条件を確認する','Nudgeアプリをダウンロードして、\nNudgeカードに申し込む','申込完了の証明を提出する','Nudgeカードでお買い物して有効化する','審査'],desc:`🎓 学生生活をもっと自由に！Nudge Card 学生部 💳✨
 「Nudge Card 学生部」は、学生のライフスタイルに合わせて使えるクレジットカードです。
 年会費は永年無料で、アルバイトをしていなくても申し込みできます。🙌
 
@@ -377,6 +378,7 @@ const D={
 };
 const fmt=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 const NAMES=['佐藤','高橋','伊藤','中村','中島','小林','加藤','加莉'];
+const DUR={3:30,2:17,4:65,7:40,5:7,1:5,6:5,8:5};
 const SURVEY=['2026年9月の流行に関するアンケート【スポット調査編】','就活時の具体志望企業名に関して','テレビが今住んでいる家にある方に質問です！'];
 function openDetail(id){
  const o=O.find(x=>x.id==id),d=D[id],[gl,gi]=G[o.g];
@@ -385,10 +387,11 @@ function openDetail(id){
  <div class="sp2"><span class="lg2">${ic('person')}</span><div><b>${d.sp}</b><small>スポンサー</small></div>${ic('chev')}</div>
  <div class="pbox"><div class="pb y"><small>団体ポイント<u>?</u></small><strong>${num(d.gp)}円</strong></div><div class="pb b"><small>個人ポイント<u>?</u></small><strong>${num(d.pp)}円</strong></div></div>
  <h3 class="d-h">対象者</h3><div class="d-tg"><span class="tag">${ic(gi)}${gl}</span>${o.y.map(y=>`<span class="tag">${ic('cap')}${y}</span>`).join('')}</div>
+ ${DUR[id]?`<h3 class="d-h">所要時間</h3><div class="d-tg"><span class="tag">${ic('clock2')}${DUR[id]}分で完了</span></div>`:''}
  ${d.mem?`<div class="d-hrow"><h3 class="d-h">同じサークルの申込者 (${d.mem}人)</h3><span class="link" style="padding:0">一覧を見る</span></div><div class="avs">${NAMES.map(n=>`<i>${n}</i>`).join('')}</div>`:''}
  ${d.steps?`<h3 class="d-h">ポイント獲得方法</h3><ol class="steps">${d.steps.map((s,i)=>`<li><b>${i+1}</b>${s.replace('\n','<br>')}</li>`).join('')}<li><b class="coin">¥</b>ポイントが付与される！</li></ol>`:''}
  <h3 class="d-h">オファー概要</h3><div class="desc">${fmt(d.desc)}</div></div>
- <div class="foot"><button class="sh" data-share="${id}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M8 7l4-4 4 4M5 11v8h14v-8"/></svg>共有する</button><button class="btn pri"${AP[id]?` data-app="${id}"`:''}>${SURVEY.includes(d.t||o.t)?'アンケートに回答する':'次へ'}</button></div>`;
+ <div class="foot"><button class="sh" data-share="${id}" aria-label="共有する"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14V3.5M8.5 7 12 3.5 15.5 7M8 10.5H7a2.5 2.5 0 0 0-2.5 2.5v5.5A2.5 2.5 0 0 0 7 21h10a2.5 2.5 0 0 0 2.5-2.5V13a2.5 2.5 0 0 0-2.5-2.5h-1"/></svg></button><button class="btn pri"${AP[id]?` data-app="${id}"`:''}>${SURVEY.includes(d.t||o.t)?'アンケートに回答する':'次へ'}</button></div>`;
  $('#detail').scrollTop=0;push('detail');placeArrows();
 }
 const AP={
